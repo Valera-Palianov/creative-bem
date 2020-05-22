@@ -2,8 +2,262 @@
 <html>
 <head>
 	<title>Homework</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+		}
+
+		.page {
+			display: grid;
+			grid-template-columns: minmax(200px, 15%) 1fr 1fr;
+			grid-template-rows: auto 1fr auto;
+			grid-column-gap: 15px;
+			grid-row-gap: 15px;
+			grid-template-areas: 
+				"sidebar header header"
+				"sidebar main main"
+				"footer footer footer";
+			background-color: #fafafa;
+			height: 100vh;
+			padding: 15px;
+			box-sizing: border-box;
+		}
+
+		.page__header {
+			grid-area: header;
+		}
+
+		.page__sidebar {
+			grid-area: sidebar;
+		}
+
+		.page__main {
+			grid-area: main;
+		}
+
+		.page__footer {
+			grid-area: footer;
+		}
+
+		.container {
+			position: relative;
+			border: 1px solid #bbb;
+			border-radius: 3px;
+			background-color: white;
+			width: 100%;
+			height: 100%;
+			box-sizing: border-box;
+			overflow: hidden;
+			overflow-y: auto;
+		}
+
+		.container__name {
+			font-size: 11px;
+			position: absolute;
+			top: 3px;
+			right: 6px;
+			color: #888;
+			text-transform: uppercase;
+		}
+
+		.container__content {
+			padding: 20px;
+		}
+
+		.articles {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			grid-gap: 15px;
+		}
+
+		.articles__item {
+			height: 100px;
+			background-color: #C7EFFF;
+		}
+
+		.navigation {
+			display: grid;
+			grid-gap: 15px;
+		}
+
+		.navigation__item {
+			text-decoration: none;
+			display: block;
+			background-color: #C7FFC8;
+			color: inherit;
+			transition: 0.2s;
+		}
+
+		.navigation__item:hover {
+			background-color: #B3E6B4;
+		}
+
+		.navigation__item_red {
+			background-color: #FFC7C7;
+		}
+
+		.navigation__item_red:hover {
+			background-color: #E6B3B3;
+		}
+	</style>
 </head>
-<body>
+<body class='page'>
+	<header class="header page__header">
+		<div class="container">
+			<div class="container__name">
+				Header
+			</div>
+			<div class="container__content">
+				Header Content
+			</div>
+		</div>
+	</header>
+	<aside class="sidebar page__sidebar">
+		<div class="container">
+			<div class="container__name">
+				Sidebar
+			</div>
+			<div class="container__content">
+				<nav class='navigation'>
+					<a class="container navigation__item" href='#'>
+						<div class="container__name">
+							nav
+						</div>
+						<div class="container__content">
+							Link
+						</div>
+					</a>
+					<a class="container navigation__item" href='#'>
+						<div class="container__name">
+							nav
+						</div>
+						<div class="container__content">
+							Link
+						</div>
+					</a>
+					<a class="container navigation__item navigation__item_red" href='#'>
+						<div class="container__name">
+							nav
+						</div>
+						<div class="container__content">
+							Link
+						</div>
+					</a>
+				</nav>
+			</div>
+		</div>
+	</aside>
+	<main class="main page__main">
+		<div class="container">
+			<div class="container__name">
+				Main
+			</div>
+			<div class="container__content">
+				<section class='articles'>
+					<div class='container articles__item'>
+						<div class="container__name">
+							Article
+						</div>
+						<div class="container__content">
+							<article class="article">
+								Article content
+							</article>
+						</div>
+					</div>
+					<div class='container articles__item'>
+						<div class="container__name">
+							Article
+						</div>
+						<div class="container__content">
+							<article class="article">
+								Article content
+							</article>
+						</div>
+					</div>
+					<div class='container articles__item'>
+						<div class="container__name">
+							Article
+						</div>
+						<div class="container__content">
+							<article class="article">
+								Article content
+							</article>
+						</div>
+					</div>
+					<div class='container articles__item'>
+						<div class="container__name">
+							Article
+						</div>
+						<div class="container__content">
+							<article class="article">
+								Article content
+							</article>
+						</div>
+					</div>
+					<div class='container articles__item'>
+						<div class="container__name">
+							Article
+						</div>
+						<div class="container__content">
+							<article class="article">
+								Article content
+							</article>
+						</div>
+					</div>
+					<div class='container articles__item'>
+						<div class="container__name">
+							Article
+						</div>
+						<div class="container__content">
+							<article class="article">
+								Article content
+							</article>
+						</div>
+					</div>
+					<div class='container articles__item'>
+						<div class="container__name">
+							Article
+						</div>
+						<div class="container__content">
+							<article class="article">
+								Article content
+							</article>
+						</div>
+					</div>
+					<div class='container articles__item'>
+						<div class="container__name">
+							Article
+						</div>
+						<div class="container__content">
+							<article class="article">
+								Article content
+							</article>
+						</div>
+					</div>
+					<div class='container articles__item'>
+						<div class="container__name">
+							Article
+						</div>
+						<div class="container__content">
+							<article class="article">
+								Article content
+							</article>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</main>
+	<footer class="footer page__footer">
+		<div class="container">
+			<div class="container__name">
+				Footer
+			</div>
+			<div class="container__content">
+				Footer Content
+			</div>
+		</div>
+	</footer>
 
 </body>
 </html>
