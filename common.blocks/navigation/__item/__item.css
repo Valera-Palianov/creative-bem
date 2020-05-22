@@ -1,0 +1,11 @@
+.navigation__item {
+	text-decoration: none;
+	display: block;
+	background-color: #C7FFC8;
+	color: inherit;
+	transition: 0.2s;
+}
+
+.navigation__item:hover {
+	background-color: #B3E6B4;
+}

@@ -1,0 +1,7 @@
+.navigation__item_red {
+	background-color: #FFC7C7;
+}
+
+.navigation__item_red:hover {
+	background-color: #E6B3B3;
+}

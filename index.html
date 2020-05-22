@@ -1,102 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Homework</title>
+	
 	<link rel="stylesheet" type="text/css" href="index.css">
-	<style type="text/css">
-		.page {
-			display: grid;
-			grid-template-columns: minmax(200px, 15%) 1fr 1fr;
-			grid-template-rows: auto 1fr auto;
-			grid-column-gap: 15px;
-			grid-row-gap: 15px;
-			grid-template-areas: 
-				"sidebar header header"
-				"sidebar main main"
-				"footer footer footer";
-			background-color: #fafafa;
-			height: 100vh;
-			padding: 15px;
-			box-sizing: border-box;
-		}
 
-		.page__header {
-			grid-area: header;
-		}
+	<link rel="stylesheet" type="text/css" href="./common.blocks/page/page.css">
+	<link rel="stylesheet" type="text/css" href="./common.blocks/page/__header/__header.css">
+	<link rel="stylesheet" type="text/css" href="./common.blocks/page/__sidebar/__sidebar.css">
+	<link rel="stylesheet" type="text/css" href="./common.blocks/page/__main/__main.css">
+	<link rel="stylesheet" type="text/css" href="./common.blocks/page/__footer/__footer.css">
 
-		.page__sidebar {
-			grid-area: sidebar;
-		}
+	<link rel="stylesheet" type="text/css" href="./common.blocks/container/container.css">
+	<link rel="stylesheet" type="text/css" href="./common.blocks/container/__name/__name.css">
+	<link rel="stylesheet" type="text/css" href="./common.blocks/container/__content/__content.css">
 
-		.page__main {
-			grid-area: main;
-		}
+	<link rel="stylesheet" type="text/css" href="./common.blocks/list/list.css">
+	<link rel="stylesheet" type="text/css" href="./common.blocks/list/__item/__item.css">
 
-		.page__footer {
-			grid-area: footer;
-		}
+	<link rel="stylesheet" type="text/css" href="./common.blocks/navigation/navigation.css">
+	<link rel="stylesheet" type="text/css" href="./common.blocks/navigation/__item/__item.css">
+	<link rel="stylesheet" type="text/css" href="./common.blocks/navigation/__item/_red/_red.css">
 
-		.container {
-			position: relative;
-			border: 1px solid #bbb;
-			border-radius: 3px;
-			background-color: white;
-			width: 100%;
-			height: 100%;
-			box-sizing: border-box;
-			overflow: hidden;
-			overflow-y: auto;
-		}
-
-		.container__name {
-			font-size: 11px;
-			position: absolute;
-			top: 3px;
-			right: 6px;
-			color: #888;
-			text-transform: uppercase;
-		}
-
-		.container__content {
-			padding: 20px;
-		}
-
-		.list {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-			grid-gap: 15px;
-		}
-
-		.list__item {
-			height: 100px;
-			background-color: #C7EFFF;
-		}
-
-		.navigation {
-			display: grid;
-			grid-gap: 15px;
-		}
-
-		.navigation__item {
-			text-decoration: none;
-			display: block;
-			background-color: #C7FFC8;
-			color: inherit;
-			transition: 0.2s;
-		}
-
-		.navigation__item:hover {
-			background-color: #B3E6B4;
-		}
-
-		.navigation__item_red {
-			background-color: #FFC7C7;
-		}
-
-		.navigation__item_red:hover {
-			background-color: #E6B3B3;
-		}
-	</style>
 </head>
 <body class='page'>
 	<header class="header page__header">
